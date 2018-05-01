@@ -183,7 +183,9 @@
 	</div>
 </div>
 
-<script src="source/js/maps.js"></script>
+<!-- <script src="source/js/maps.js"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"
+type="text/javascript"></script>
 <script>
 
 var myCenter=new google.maps.LatLng(38.4629894,27.1287323);
@@ -215,13 +217,11 @@ marker.setMap(map);
 <script>
 	$(window).resize(function(){
 		var new_height = $("#image_border").height();
-		console.log(new_height);
 		$("#googleMap").height(new_height);
 	});
 
 	$(window).load(function(){
 		var new_height = $("#image_border").height();
-		console.log(new_height);
 		$("#googleMap").height(new_height);
 		google.maps.event.addDomListener(window, 'load', initialize());
 	});

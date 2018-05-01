@@ -12,13 +12,6 @@ $(function() {
       " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
 
-	var container = $('.grid').isotope({
-		itemSelector: '.col-xs-12',
-		getSortData: {
-			name: '.name',
-			price: '.price parseInt'
-		}
-	});
 	$('.alphSort').on('click', function(e){
 		e.preventDefault();
 		container.isotope({ sortBy: 'name'});
